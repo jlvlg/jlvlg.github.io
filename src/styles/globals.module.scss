@@ -1,0 +1,6 @@
+@use "./colors" as c;
+
+:export {
+  black: c.$black;
+  white: c.$white;
+}
