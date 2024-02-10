@@ -4,7 +4,7 @@
 
 .atropos {
   @include s.expand();
-  padding: 100px;
+  overflow: hidden;
 
   hgroup {
     @include s.expand();
