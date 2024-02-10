@@ -1,0 +1,13 @@
+@use "styles/colors" as c;
+
+.landing {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.sphere {
+  block-size: 100%;
+  inline-size: 100%;
+  position: fixed;
+  background-color: c.$black;
+}

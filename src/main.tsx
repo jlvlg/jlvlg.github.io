@@ -4,9 +4,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "reset-css";
 import "./index.scss";
-import Root from "./routes/root";
+import Landing from "./routes/landing";
 
-const router = createBrowserRouter([{ path: "/", element: <Root /> }]);
+const router = createBrowserRouter([{ path: "/", element: <Landing /> }]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

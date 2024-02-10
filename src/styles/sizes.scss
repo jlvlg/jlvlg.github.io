@@ -1,0 +1,8 @@
+@mixin expand($inline: true, $block: true) {
+  @if $inline {
+    inline-size: 100%;
+  }
+  @if $block {
+    block-size: 100%;
+  }
+}

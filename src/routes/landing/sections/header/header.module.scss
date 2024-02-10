@@ -1,0 +1,39 @@
+@use "styles/fonts" as f;
+@use "styles/colors" as c;
+@use "styles/sizes" as s;
+
+.atropos {
+  @include s.expand();
+
+  hgroup {
+    @include s.expand();
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+
+    h1,
+    p {
+      color: c.$white;
+      font-weight: 700;
+      font-family: "Nunito Sans", sans-serif;
+      text-align: center;
+    }
+
+    p {
+      --ti-cursor-color: gray;
+      --ti-cursor-font-size: clamp(1.5rem, 3.5vw, 3rem);
+      font-size: f.$h2;
+      text-transform: uppercase;
+
+      strong {
+        background-color: c.$white;
+        color: c.$black;
+      }
+    }
+
+    h1 {
+      font-size: f.$h1;
+    }
+  }
+}

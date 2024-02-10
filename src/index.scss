@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  block-size: 100%;
+  inline-size: 100%;
+}
