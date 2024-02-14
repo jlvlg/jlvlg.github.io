@@ -16,12 +16,12 @@ function LandingPage() {
   black.offsetHSL(0, 0, 0.01);
 
   return (
-    <div ref={pageRef} className={styles.page}>
+    <div ref={pageRef} id="page-container" className={styles.page}>
       <div className={styles.sphere}>
         <Canvas>
           <Sphere
             n={1000}
-            radius={2.5}
+            radius={2}
             black={black}
             points={[
               [0, 0, 0],

@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "version": "1.1.4",
+  "version": "1.1.5",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,6 @@
   "dependencies": {
     "@react-three/drei": "^9.97.3",
     "@react-three/fiber": "^8.15.16",
-    "atropos": "^2.0.2",
     "framer-motion": "^11.0.3",
     "framer-motion-3d": "^11.0.3",
     "react": "^18.2.0",
