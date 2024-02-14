@@ -1,0 +1,81 @@
+@use "styles/sizes" as s;
+@use "styles/colors" as c;
+@use "styles/fonts" as f;
+
+.aboutme {
+  @include s.fill-screen();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 5vw;
+}
+
+.container {
+  max-height: 100%;
+  overflow: hidden;
+  display: grid;
+  gap: 3vw;
+  grid-template:
+    "a b" 1fr
+    "c c" min-content / 1fr 1fr;
+
+  @media (min-width: 1080px) {
+    grid-template:
+      "a a" min-content
+      "c b" min-content / 1fr 1fr;
+  }
+
+  h2 {
+    align-self: end;
+    grid-area: a;
+    font-size: f.$h2;
+    color: c.$white;
+    font-weight: 700;
+    font-family: "Nunito Sans", sans-serif;
+  }
+}
+
+.photo {
+  grid-area: b;
+  align-self: end;
+  overflow: hidden;
+  max-width: 100%;
+  justify-self: end;
+  max-height: 100%;
+  aspect-ratio: 1;
+  border: 2px solid c.$white;
+
+  @media (min-width: 1080px) {
+    align-self: start;
+  }
+
+  img {
+    @include s.expand();
+    object-position: center;
+  }
+}
+
+.text {
+  grid-area: c;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid c.$white;
+  backdrop-filter: blur(15px);
+  font-family: "Roboto Mono", monospace, sans-serif;
+  padding: 5px;
+  color: c.$white;
+  font-size: f.$body-dynamic;
+
+  @media (min-width: 1080px) {
+    width: 100%;
+    aspect-ratio: 1;
+  }
+
+  p {
+    text-align: justify;
+    text-indent: 50px;
+  }
+}

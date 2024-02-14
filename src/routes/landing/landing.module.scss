@@ -1,13 +1,19 @@
 @use "styles/colors" as c;
+@use "styles/sizes" as s;
 
-.landing {
-  block-size: 100%;
-  inline-size: 100%;
+.page {
+  @include s.fill-screen();
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
 }
 
 .sphere {
-  block-size: 100%;
-  inline-size: 100%;
+  @include s.fill-screen();
   position: fixed;
   background-color: c.$black;
+  z-index: -1;
+}
+
+.section {
+  scroll-snap-align: start;
 }

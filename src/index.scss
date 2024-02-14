@@ -1,10 +1,13 @@
+@use "styles/sizes" as s;
+
 * {
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
-  block-size: 100%;
-  inline-size: 100%;
+html {
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }

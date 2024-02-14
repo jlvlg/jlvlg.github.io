@@ -1,34 +1,43 @@
-import { PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Sphere from "components/sphere";
+import { useScroll, useSpring } from "framer-motion";
+import { useRef } from "react";
 import globals from "styles/globals.module.scss";
 import * as THREE from "three";
 import styles from "./landing.module.scss";
+import AboutMe from "./sections/aboutme";
 import Header from "./sections/header";
 
 function LandingPage() {
+  const pageRef = useRef(null!);
+  const { scrollYProgress } = useScroll({ container: pageRef });
+  const spring = useSpring(scrollYProgress, { bounce: 0 });
   const black = new THREE.Color(globals.black);
   black.offsetHSL(0, 0, 0.01);
 
   return (
-    <div className={styles.landing}>
+    <div ref={pageRef} className={styles.page}>
       <div className={styles.sphere}>
         <Canvas>
-          <PerspectiveCamera makeDefault position={[0, 0, 3]} />
           <Sphere
-            position={[0, 0, 0]}
-            radius={1}
-            instances={1000}
-            colors={[black, 0x6d7178, globals.white]}
-            animation={(group, delta) => {
-              group.rotation.x += delta / 4;
-              group.rotation.y += delta / 5;
-              group.rotation.z += delta / 6;
-            }}
+            n={1000}
+            radius={2.5}
+            black={black}
+            points={[
+              [0, 0, 0],
+              [0, 0, 5],
+            ]}
+            colors={[
+              black,
+              new THREE.Color(0x6d7178),
+              new THREE.Color(globals.white),
+            ]}
+            progress={spring}
           />
         </Canvas>
       </div>
-      <Header />
+      <Header className={styles.section} />
+      <AboutMe className={styles.section} />
     </div>
   );
 }

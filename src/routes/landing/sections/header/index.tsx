@@ -2,12 +2,12 @@ import Atropos from "atropos/react";
 import TypeIt from "typeit-react";
 import styles from "./header.module.scss";
 
-export type Props = {};
+export type Props = { className?: string };
 
-function Header({}: Props) {
+function Header({ className }: Props) {
   return (
     <Atropos
-      className={styles.atropos}
+      className={`${styles.atropos} ${className || ""}`}
       component="header"
       shadow={false}
       highlight={false}

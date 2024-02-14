@@ -1,8 +1,17 @@
-@mixin expand($inline: true, $block: true) {
-  @if $inline {
-    inline-size: 100%;
+@mixin expand($width: true, $height: true) {
+  @if $width {
+    width: 100%;
   }
-  @if $block {
-    block-size: 100%;
+  @if $height {
+    height: 100%;
+  }
+}
+
+@mixin fill-screen($width: true, $height: true) {
+  @if $width {
+    width: 100vw;
+  }
+  @if $height {
+    height: 100vh;
   }
 }

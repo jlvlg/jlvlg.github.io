@@ -3,7 +3,7 @@
 @use "styles/sizes" as s;
 
 .atropos {
-  @include s.expand();
+  @include s.fill-screen();
   overflow: hidden;
 
   hgroup {
@@ -24,7 +24,7 @@
     p {
       --ti-cursor-color: gray;
       --ti-cursor-font-size: clamp(1.5rem, 3.5vw, 3rem);
-      font-size: f.$h2;
+      font-size: f.$h2-dynamic;
       text-transform: uppercase;
 
       strong {
@@ -34,7 +34,7 @@
     }
 
     h1 {
-      font-size: f.$h1;
+      font-size: f.$h1-dynamic;
     }
   }
 }

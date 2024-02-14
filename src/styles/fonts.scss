@@ -1,2 +1,4 @@
-$h1: clamp(3rem, 15vw, 6rem);
-$h2: clamp(1rem, 5vw, 2rem);
+$h1-dynamic: clamp(3rem, 15vw, 6rem);
+$h2-dynamic: clamp(1rem, 6vw, 2rem);
+$body-dynamic: clamp(1rem, 5vw, 1.5rem);
+$h2: 3rem;
