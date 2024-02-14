@@ -10,6 +10,7 @@ export default defineConfig({
       styles: "/src/styles",
       components: "/src/components",
       hooks: "/src/hooks",
+      assets: "/src/assets",
     },
   },
 });

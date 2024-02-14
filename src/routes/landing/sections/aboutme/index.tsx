@@ -1,3 +1,4 @@
+import me from "assets/me.jpeg";
 import { motion } from "framer-motion";
 import styles from "./aboutme.module.scss";
 
@@ -7,17 +8,17 @@ export type Props = {
 
 function AboutMe({ className }: Props) {
   return (
-    <section className={`${styles.aboutme} ${className || ""}`}>
+    <motion.section layout className={`${styles.aboutme} ${className || ""}`}>
       <div className={styles.container}>
         <h2>Sobre mim</h2>
         <div className={styles.photo}>
-          <img src="public/me.jpeg" alt="Foto do autor" />
+          <img src={me} alt="Foto do autor" />
         </div>
         <motion.div
           className={styles.text}
           initial={{ height: 0 }}
           whileInView={{
-            height: "min-content",
+            height: "100%",
             transition: { delay: 0.3 },
           }}
           layout
@@ -36,7 +37,7 @@ function AboutMe({ className }: Props) {
           </p>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
